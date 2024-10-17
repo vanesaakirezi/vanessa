@@ -13,5 +13,5 @@ def print_prime(n):
       for num in range(2,n+1):
          if is_prime(num):
             print(num)
-print(45)
+
   

@@ -1,0 +1,30 @@
+#a perfect number is perfect integer
+#that is equal to the sum of its proper
+#divisors.write python program that display
+# all perfect number between 1 and 1000000
+"""
+function to check if a number is 
+perfect or not. input :positive 
+integer output:boolean
+"""
+#my code
+def is_perfect(number):
+    if number <1:
+        return False
+    sum=0
+    for i in range(1,number):
+        if number%i==0:
+          sum +=i
+    return sum==number
+
+print(is_perfect(28))
+print(is_perfect(6))
+print(is_perfect(12))
+def find_perfect_number(start,end):
+ perfect_number=[]
+ for i in range(start,end+1):
+    if is_perfect(i):
+      perfect_number.append(i)
+ return perfect_number
+
+print(find_perfect_number(1,1000))
